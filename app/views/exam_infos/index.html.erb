@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Exam Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Exam</th>
+      <th>Exam name</th>
+      <th>Class</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exam_infos.each do |exam_info| %>
+      <tr>
+        <td><%= exam_info.exam_id %></td>
+        <td><%= exam_info.exam_name %></td>
+        <td><%= exam_info.class_id %></td>
+        <td><%= link_to 'Show', exam_info %></td>
+        <td><%= link_to 'Edit', edit_exam_info_path(exam_info) %></td>
+        <td><%= link_to 'Destroy', exam_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exam info', new_exam_info_path %>

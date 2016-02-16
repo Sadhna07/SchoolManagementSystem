@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :result_infos
+  resources :subject_infos
+  resources :exam_infos
+  resources :attendence_infos
+  resources :class_infos
+  resources :student_infos
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Subject Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Subject name</th>
+      <th>Exam</th>
+      <th>Maximum marks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subject_infos.each do |subject_info| %>
+      <tr>
+        <td><%= subject_info.subject_id %></td>
+        <td><%= subject_info.subject_name %></td>
+        <td><%= subject_info.exam_id %></td>
+        <td><%= subject_info.maximum_marks %></td>
+        <td><%= link_to 'Show', subject_info %></td>
+        <td><%= link_to 'Edit', edit_subject_info_path(subject_info) %></td>
+        <td><%= link_to 'Destroy', subject_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subject info', new_subject_info_path %>

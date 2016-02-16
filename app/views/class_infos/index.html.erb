@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Class Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Class name</th>
+      <th>Maximum limit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @class_infos.each do |class_info| %>
+      <tr>
+        <td><%= class_info.class_id %></td>
+        <td><%= class_info.class_name %></td>
+        <td><%= class_info.maximum_limit %></td>
+        <td><%= link_to 'Show', class_info %></td>
+        <td><%= link_to 'Edit', edit_class_info_path(class_info) %></td>
+        <td><%= link_to 'Destroy', class_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Class info', new_class_info_path %>

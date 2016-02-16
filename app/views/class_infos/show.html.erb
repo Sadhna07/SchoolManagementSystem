@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @class_info.class_id %>
+</p>
+
+<p>
+  <strong>Class name:</strong>
+  <%= @class_info.class_name %>
+</p>
+
+<p>
+  <strong>Maximum limit:</strong>
+  <%= @class_info.maximum_limit %>
+</p>
+
+<%= link_to 'Edit', edit_class_info_path(@class_info) %> |
+<%= link_to 'Back', class_infos_path %>

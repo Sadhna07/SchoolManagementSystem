@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @subject_info.subject_id %>
+</p>
+
+<p>
+  <strong>Subject name:</strong>
+  <%= @subject_info.subject_name %>
+</p>
+
+<p>
+  <strong>Exam:</strong>
+  <%= @subject_info.exam_id %>
+</p>
+
+<p>
+  <strong>Maximum marks:</strong>
+  <%= @subject_info.maximum_marks %>
+</p>
+
+<%= link_to 'Edit', edit_subject_info_path(@subject_info) %> |
+<%= link_to 'Back', subject_infos_path %>
