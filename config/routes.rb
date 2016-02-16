@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :result_infos
   resources :subject_infos
   resources :exam_infos
+  post 'attendence_infos/update'
   resources :attendence_infos
   resources :class_infos
   resources :student_infos
