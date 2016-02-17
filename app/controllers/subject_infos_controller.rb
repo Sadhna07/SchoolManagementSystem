@@ -4,7 +4,8 @@ class SubjectInfosController < ApplicationController
   # GET /subject_infos
   # GET /subject_infos.json
   def index
-    @subject_infos = SubjectInfo.all
+    @subject_infos = SubjectInfo.order('exam_id').all
+
   end
 
   # GET /subject_infos/1

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  get 'result_infos/redirect_to_new'
+  get 'result_infos/select'
+  post 'result_infos/create'
   resources :result_infos
   resources :subject_infos
   resources :exam_infos

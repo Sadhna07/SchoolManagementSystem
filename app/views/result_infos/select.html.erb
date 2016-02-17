@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+<%= form_for @result_info, :url => result_infos_redirect_to_new_path, :method => :get do |f|%>
+    <tr><td>Select the Class for which you want to submit marks:</td><td><%= f.collection_select(:exam_id, ClassInfo.all, :class_id, :class_name, {}, { :multiple => false }) %> </td></tr>
+    <tr><td>Select the Subject for which you want to submit marks:</td><td><%= f.collection_select(:subject_id, SubjectInfo.all, :exam_id, :subject_name, {}, { :multiple => false }) %></td></tr>
+<tr><td>
+    <%=f.submit :OpenMarksForm%></td></tr></table>
+<% end %>
+<%= link_to 'Back', result_infos_path %>
+	
