@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20160216154148) do
   create_table "student_infos", force: :cascade do |t|
     t.integer  "student_id"
     t.string   "student_name"
-    t.integer  "referenced_class_id"
+    t.integer  "referenced_class_id"  
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end

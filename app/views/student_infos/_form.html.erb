@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :referenced_class_id %><br>
-    <%= f.number_field :referenced_class_id %>
+    <%= f.collection_select(:referenced_class_id, ClassInfo.all, :class_id, :class_name, {}, { :multiple => false }) %>
+	
   </div>
   <div class="actions">
     <%= f.submit %>

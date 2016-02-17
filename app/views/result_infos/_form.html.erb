@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :student_id %><br>
-    <%= f.number_field :student_id %>
+    <%= f.collection_select(:student_id, StudentInfo.all, :student_id, :student_name, {}, { :multiple => false }) %>
   </div>
   <div class="field">
     <%= f.label :exam_id %><br>
-    <%= f.number_field :exam_id %>
+    <%= f.collection_select(:exam_id, ExamInfo.all, :exam_id, :exam_name, {}, { :multiple => false }) %>
   </div>
   <div class="field">
     <%= f.label :subject_id %><br>
-    <%= f.number_field :subject_id %>
+    <%= f.collection_select(:subject_id, SubjectInfo.all, :subject_id, :subject_name, {}, { :multiple => false }) %>
   </div>
   <div class="field">
     <%= f.label :marks_obtained %><br>

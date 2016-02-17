@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.select(:status, options_for_select([['ABSENT','ABSENT'], ['PRESENT','PRESENT']])) %>
   </div>
   <div class="field">
     <%= f.label :record_date %><br>

@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :exam_id %><br>
-    <%= f.number_field :exam_id %>
+    <%= f.collection_select(:exam_id, ExamInfo.all, :exam_id, :exam_name, {}, { :multiple => false }) %>
+
   </div>
   <div class="field">
     <%= f.label :maximum_marks %><br>
